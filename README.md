@@ -14,6 +14,8 @@ I can emphasizing text *like this*, __like this__ or _**like this**_
 1. Second item
 1. Third item
 
+![Octocat](http://lurkmore.so/images/thumb/e/e0/Octocat_github.png/180px-Octocat_github.png)
+
 [**Google**](https://www.google.ru/)
 
 Like Geralt of Rivia said:
@@ -27,3 +29,12 @@ void hello()
  std::cout << "Hello, World!";
 }
 ```
+
+First header | Second header
+:-------------|--------------:
+Cell 1.1 | Cell 1.2
+Cell 2.1 | Cell 2.2
+
+@sandino
+
+It works! :scream_cat:
