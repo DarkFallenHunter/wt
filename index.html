@@ -3,7 +3,7 @@
 Created using JS Bin
 http://jsbin.com
 
-Copyright (c) 2018 by DarkFallenHunter (http://jsbin.com/zaqiqov/4/edit)
+Copyright (c) 2018 by DarkFallenHunter (http://jsbin.com/safoyid/145/edit)
 
 Released under the MIT license: http://jsbin.mit-license.org
 -->
@@ -12,30 +12,105 @@ Released under the MIT license: http://jsbin.mit-license.org
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Квест №5</title>
-<style id="jsbin-css">
-body {
-  background-color: darkorange;
-}
-
-listTitle {
-  background-color: lightgreen;
-  color: white;
-  font-size: xx-large;
-}
-
-text {
-  font-size: x-large;
-}
-</style>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  <link href="/style.css" rel="stylesheet">
+  <title>Квест №20</title>
 </head>
 <body>
-  <center>
-    <listTitle>Квест №5</listTitle>
-    <br>
-    <br>
-    <text>Это тоже работает! 🙀</text>
-  </center>
-  <text></text>
+  <div class="wrapper">
+    <img class="start_img" src="http://www.davidhayden.me/media/default/posts/Visual-Studio-Code-for-Developing-.NET-Core-C-Apps-on-macOS.jpg" alt="C# code">
+    <h1 class="select first_letter">List C#</h1>
+    <h3 class="select first_letter">Вступление</h3>
+    <p class="select">
+      Данная статься посвящена знакомству с классом List в C#. Будут рассмотренны некоторые его особености.
+    </p>
+    <h3 class="select first_letter">Отличия от массива</h3>
+    <p class="select">
+      <span class="quote select">Массивы прекрасно подходят для хранения фиксированного списка значений или ссылок.</span>
+      Но при необходимости добавления нового элемента или удаления существующего, возникают проблемы, и коллекции позволяют
+      их решить. Новые возможности:
+      <ol>
+        <li class="select">Добавить новый элемент. Метод Add().</li>
+        <li class="select">Узнать, содержится ли объект определённого типа в коллекции. Метод Contains().</li>
+        <li class="select">Определить индекс элемента. Метод IndexOf().</li>
+        <li class="select">Удалить элемент из коллекции. Метод Remove().</li>
+        <li class="select">Отсортировать коллекцию. Метод Sort().</li>
+      </ol>
+    </p>
+    <h3 class="select first_letter">Сортировка</h3>
+    <p class="select">Обобщённая коллекция List содержит метод Sort(), который позволяет сортировать её
+      содержимое по заданному признаку. Существует два варианта использования этого метода:
+      <ol>
+        <li>
+          <p class="select first_line">
+            Тот класс, из экземпляров которого состоит List должен наследоваться от интерфейса
+            IComparable, который содержит метор CompareTo(). Этот метод сравнивает данный экземпляр
+            класса с другим экземпляром.
+            <br>
+            Пример реализации:
+          </p>
+          <blockquote>
+            <code>
+              <pre class="select">
+class Duck : IComparable&lt;Duck&gt;
+{
+  public int Size;
+  public KindOfDuck Kind;
+
+  public int CompareTo(Duck duckToCompare)
+  {
+    if (this.Size &gt; duckToCompare.Size)
+      return 1;
+     else
+      if (this.Size &lt; duckToCompare.Size)
+         return -1;
+      else
+         return 0;
+  }
+}</pre>
+            </code>
+          </blockquote>
+        </li>
+        <li>
+          <p class="select first_line">
+            Создать класс, наследуемый от интерфейса IComparer, содержащего метод Compare(), сравнивающий
+            2 экземпляра заданного класса, и вызвать Sort() с экземпляром этого класса в качестве аргумента.
+            <br>
+            Пример реализации:
+          </p>
+            <blockquote>
+            <code>
+              <pre class="select">
+class DuckComparerByKind : IComparer&lt;Duck&gt;
+{
+  public int Compare(Duck x, Duck y)
+  {
+    if (x.Kind &lt; y.Kind)
+      return -1;
+    if (x.Kind &gt; y.Kind)
+       return 1;
+    return 0;
+  }
+}</pre>
+            </code>
+          </blockquote>
+        </li>
+      </ol>
+    </p>
+    <h3 class="select first_letter">Заключение</h3>
+    <p class="select">
+      Коллекции позволяют решить проблемы, возникающие в массивах из-за их фиксированной длинны.
+      Благодаря такому классу, как List, можно более гибко оперировать данными, не взирая на их количество.
+    </p>
+    <h3 class="select first_letter">P.S.</h3>
+    <p class="select">
+      <img class="img_book" src="https://studfiles.net/html/2706/735/html_naoR5evUWb.5oyt/htmlconvd-AAKcBU1x1.jpg" alt="Изучаем C#" align="left">
+      <p class="select">
+        Все цитаты и код взяты из книги <cite>Изучаем С#</cite>, чуть больше информации
+        по которой можно получить по данной <a href="https://habrahabr.ru/company/piter/blog/227735/">ссылке</a>.
+      </p>
+    </p>
+  </div>
 </body>
 </html>
