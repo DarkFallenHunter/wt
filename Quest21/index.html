@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by DarkFallenHunter (http://jsbin.com/vonuhip/165/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+@keyframes move-side {
+  0% {left: -150px;}
+  100% {left: 0;}
+}
+
+@keyframes move-side-back {
+  0% {left: 0;}
+  100% {left: -150px;}
+}
+
+@keyframes fadeIn {
+  0% {
+      transform: scale(0);
+      opacity: 0;		
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;	
+  }		
+}
+@keyframes fadeOut {
+  0% {
+      transform: scale(1);
+      opacity: 1;		
+     }
+  100% {
+      transform: scale(0);
+      opacity: 0;	
+  }		
+}
+
+body {
+  background-color: lightgray;
+}
+
+a {
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.content {
+  text-align: center;
+}
+
+.sidebar {
+  height: 40%;
+  position: absolute;
+  width: 150px;
+  left: -150px;
+}
+
+.close-menu {
+  width: 20px;
+}
+
+.move-side {
+  -webkit-animation: move-side 1s ease-in-out forwards;
+  -o-animation: move-side 1s ease-in-out forwards;
+  animation: move-side 1s ease-in-out forwards;
+}
+
+.move-side-back {
+  -webkit-animation: move-side-back 1s ease-in-out forwards;
+  -o-animation: move-side-back 1s ease-in-out forwards;
+  animation: move-side-back 1s ease-in-out forwards;
+}
+
+.modal {
+  display: none;
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 20px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20%;
+  padding: 1px 10px;
+}
+
+.close-modal {
+  float: right;
+  width: 30px;
+}
+
+.open-modal {
+  display: block;
+  animation: fideIn 0.2s ease-in-out;
+}
+
+.close-modal {
+  visibility: visible;
+  animation: fideOut 0.2s ease-in-out;
+}
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    
+    <div id="content" class="content">
+      <input type="button" id="menu-but" class="menu-but" value="Меню">
+      <input type="button" id="module-but" class="module-but" value="Модальное окно">
+    </div>
+    
+    <div id="menu" class="sidebar">
+      <img src="https://png.icons8.com/windows/50/000000/cancel.png" id="close-menu" class="close-menu">
+      <br>
+      <a href="#">Home</a>
+      <hr>
+      <a href="#">About</a>
+      <hr>
+      <a href="#">Pages</a>
+      <hr>
+      <a href="#">Contacts</a>
+      <hr>
+      <a href="#">Help</a>
+    </div>
+    
+    <div class="modal" id="modal">
+      <div class="modal-content" id="modal-content">
+        <img src="https://png.icons8.com/windows/50/000000/cancel.png" id="close-modal" class="close-modal">
+        <h3>Modal</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem harum, dignissimos, consectetur aliquam natus porro officia aspernatur velit tenetur.
+          Soluta in, laboriosam. Sequi illo molestiae magni inventore necessitatibus, velit consectetur omnis nam excepturi, amet voluptates sit debitis non sint 
+          mollitia cumque tempore totam aliquam deserunt! Eos corporis repellendus vitae qui architecto doloremque adipisci non at ipsa nemo. Amet, molestiae?</p>
+      </div>
+    </div>
+  </div>
+<script id="jsbin-javascript">
+var menuBut = document.getElementById('menu-but')
+var menu = document.getElementById('menu')
+var closeMenu = document.getElementById('close-menu')
+var modalBut = document.getElementById('module-but')
+var modal = document.getElementById('modal')
+var modalContent = document.getElementById('modal-content')
+var closeModal = document.getElementById('close-modal')
+
+menuBut.onclick = function(){
+  menu.classList.remove('move-side-back')
+  menu.classList.add('move-side')
+}
+
+closeMenu.onclick = function(){
+  menu.classList.remove('move-side')
+  menu.classList.add('move-side-back')
+}
+
+modalBut.onclick = function() {
+  modal.style.display = "block"
+  modalContent.classList.remove('close-modal')
+  modalContent.classList.add('open-modal')
+}
+
+closeModal.onclick = function() {
+  modal.style.display = "none"
+  modalContent.classList.remove('open-modal')
+  modalContent.classList.add('close-modal')
+}
+</script>
+</body>
+</html>
