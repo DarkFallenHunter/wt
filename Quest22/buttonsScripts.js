@@ -1,3 +1,14 @@
+function randArr(maxLength)
+{
+  var len = Math.floor(Math.random() * maxLength)
+  var arr = new Array(len)
+  
+  for (var i = 0; i < len; i++)
+    arr[i] = Math.floor(Math.random() * 500)
+    
+  return arr
+}
+
 var insertionSortBut = document.getElementById('insertion-sort-but')
 
 insertionSortBut.onclick = function() {
