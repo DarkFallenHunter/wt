@@ -8,9 +8,9 @@ function addItem(tree, item)
 	}
 	else 
 		if (item > tree[0])
-			addElem(tree[2],item)
+			addItem(tree[2],item)
 		else
-			addElem(tree[1],item)
+			addItem(tree[1],item)
 }
 
 function treeToArray(tree)

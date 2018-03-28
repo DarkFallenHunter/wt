@@ -10,6 +10,9 @@ function bucketSort(arr)
 				maxElem = arr[i]
 
 	bucketsLen = Math.floor((maxElem - minElem) / bucketsLen + 1)
+	if (bucketsLen < 5)
+		bucketsLen = 5
+	
 	var buckets = new Array(bucketsLen)
 
 	for (var i = 0; i < buckets.length; i++)
