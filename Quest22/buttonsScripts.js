@@ -3,7 +3,7 @@ function randArr(maxLength)
   var len = Math.floor(Math.random() * maxLength)
   var arr = new Array(len > 4 ? len : 4)
   
-  for (var i = 0; i < len; i++)
+  for (var i = 0; i < arr.length; i++)
     arr[i] = Math.floor(Math.random() * 500)
     
   return arr
