@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by DarkFallenHunter (http://jsbin.com/xutubaz/39/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+input {
+  margin-bottom: 5px;
+}
+
+.header {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+  <div class="header">Свойства с данными</div>
+  <input type="button" id='unconfBut' value='Unconfigurable Object'><br>
+  <input type="button" id='unenumBut' value='Unenumerable Object'><br>
+  <input type="button" id='unwriteBut' value='Unwriteble Object'><br>
+  <input type="button" id='showDesc' value='Show Description'><br>
+  <input type="button" id='addBut' value='Add 50'><br>
+  <input type="button" id='sumBut' value='Sum of values'><br>
+  <input type="button" id='delBut' value='Delete value'><br>
+  <hr>
+  <div class="header">Свойства с функциями доступа</div>
+  <input type="text" id='age'> <input type="button" id='changeAge' value='Change Age'><br>
+  <input type="button" id='showValues' value='Show Values'><br>
+  <input type="button" id='showDescFunc' value='Show Description'><br>
+  <hr>
+  <div class="header">Externable, Seal, Freeze</div>
+  <input type="button" id='unextObjBut' value='Unexternable Object'><br>
+  <input type="button" id='sealObjBut' value='Seal Object'><br>
+  <input type="button" id='freezeObjBut' value='Freezed Object'><br>
+  <input type="button" id='showTypeBut' value='Show type'><br>
+  <input type="button" id='addValueBut' value='Add value'><br>
+  <input type="button" id='showObjBut' value='Show object'><br>
+  <input type="button" id='setValueBut' value='Set value1'><br>
+  <input type="button" id='delValueBut' value='Delete value'><br>
+  <hr>
+  <div class="header">Цепочка прототивов</div>
+  <div>
+    <pre>var animal = {
+  eats: true,
+  sleeps: true
+}
+
+var dog = {
+  bark: 'Woof-woof',
+  wagTheTail: true,
+  __proto__: animal
+}
+
+Object.defineProperty(dog, 'bark', {
+  enumerable: false
+})
+
+var labrador = {
+  name: 'John',
+  bark: 'Woof-woof-woof',
+  __proto__: dog
+}
+
+Object.defineProperty(labrador, 'name', {
+  enumerable: false
+})</pre>
+  </div>
+  <input type="text" id='checkInText'> <input type="button" id='checkInBut' value='In labrador'><br>
+  <input type="button" id='showProps' value='Show properties (for ... in)'><br>
+  <input type="button" id='showKeys' value='Show keys of labrador'><br>
+  <input type="button" id='showPropsNames' value='Show properties of labrador'><br>
+  <input type="button" id='barkkingBut' value='labrador.bark'><br>
+  <input type="button" id='changeSleepsBut' value='Set sleeps to false'>
+  <script type="text/javascript" src="firstPart"></script>
+  <script type="text/javascript" src="secondPart"></script>
+</body>
+</html>
