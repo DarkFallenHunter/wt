@@ -181,36 +181,37 @@ body {
 <body>
   <div class='wrapper'>
     <div class='mode-choose'>Режим:
-      <label><input id='ap-radio' name='mode' type='radio' value='AP'>AP</label>
-      <label><input id='wifi-radio' name='mode' type='radio' value='WiFi' checked>WiFi</label>
+      <label><input id='ap-radio' class='radio-mode' name='mode' type='radio' value='AP'>AP</label>
+      <label><input id='wifi-radio' class='radio-mode' name='mode' type='radio' value='WiFi' checked>WiFi</label>
     </div>
     <form>
       <fieldset class='combobox-mode combobox-ap combobox-style' id='combobox-ap-id'>
-        Имя WiFi<input type="text" id='wifi-name-ap' class='name-mode'>
+        Имя WiFi<input type="text" id='wifi-name-ap' class='mode-field name-mode'>
         <br>
-        Пароль<input type="password" id='wifi-pass-ap' class='pass-mode'>
+        Пароль<input type="password" id='wifi-pass-ap' class='mode-field pass-mode'>
         <br>
         Тип
-        <select name="select-type-ap" id="wifi-type-ap" class='type-mode'></select>
+        <select name="select-type-ap" id="wifi-type-ap" class='mode-field type-mode'></select>
         <input type="button" class='save' value='Save' id='save-but-ap'>
       </fieldset>
       <fieldset class='combobox-mode combobox-style' id='combobox-wifi-id'>
-        Имя WiFi<input type='text' id='wifi-name-wifi' class='name-mode'>
+        Имя WiFi<input type='text' id='wifi-name-wifi' class='mode-field name-mode'>
         <br>
         Тип
-        <select name="select-type-wifi" id="wifi-type-wifi" class='type-mode'></select>
+        <select name="select-type-wifi" id="wifi-type-wifi" class='mode-field type-mode'></select>
         <br>
-        Пароль<input type="password" id='wifi-pass-wifi' class='pass-mode'>
+        Пароль<input type="password" id='wifi-pass-wifi' class='mode-field pass-mode'>
         <input type="button" class='save' value='Save' id='save-but-wifi'>
       </fieldset>
+      <div class='mqtt-label'>MQTT</div>
       <fieldset class='combobox-mqtt combobox-style' id='combobox-mqtt-id'>
-        Адрес сервера<input type='text' id='mqtt-address' class='address'>
+        Адрес сервера<input type='text' id='mqtt-address' class='mqtt-field address'>
         <br>
-        Порт<input type='text' id='mqtt-port' class='port'>
+        Порт<input type='text' id='mqtt-port' class='mqtt-field port'>
         <br>
-        Логин<input type="text" id='mqtt-login' class='login'>
+        Логин<input type="text" id='mqtt-login' class='mqtt-field login'>
         <br>
-        Пароль<input type="password" id='mqtt-pass' class='pass'>
+        Пароль<input type="password" id='mqtt-pass' class='mqtt-field pass'>
         <input type="button" class='save' value='Save' id='save-but-mqtt'>
       </fieldset>
     </form>
