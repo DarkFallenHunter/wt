@@ -73,6 +73,7 @@ body {
   border-radius: 10px;
   border: 2px solid #3b3b3b;
   background: #ffbd38;
+  cursor: pointer;
 }
 
 .save:hover {
@@ -80,7 +81,12 @@ body {
 }
 
 .save:active {
+  outline: none;
   background: #cf6f02;
+}
+
+.save:focus {
+  outline: none;
 }
 
 .combobox-mqtt {
