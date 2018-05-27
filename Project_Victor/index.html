@@ -47,22 +47,23 @@ body {
   visibility: hidden;
 }
 
-.name-mode {
+.mode-field {
   width: 150px;
-  margin-left: 25px;
   margin-bottom: 5px;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.name-mode {
+  margin-left: 25px;
 }
 
 .pass-mode {
   margin-left: 33px;
-  margin-bottom: 5px;
-  width: 150px;
 }
 
 .type-mode {
   margin-left: 57px;
-  margin-bottom: 5px;
-  width: 150px;
 }
 
 .save {
@@ -74,6 +75,7 @@ body {
   border: 2px solid #3b3b3b;
   background: #ffbd38;
   cursor: pointer;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .save:hover {
@@ -89,37 +91,46 @@ body {
   outline: none;
 }
 
-.combobox-mqtt {
+.mqtt-label {
   position: absolute;
-  margin: 0 auto;
+  top: 150px;
   left: 0;
   right: 0;
-  top: 150px;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.combobox-mqtt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 175px;
   width: 300px;
   height: 120px;
+}
 
+.mqtt-field {
+  width: 160px;
+  margin-bottom: 5px;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 0;
 }
 
 .address {
   margin-left: 20px;
-  margin-bottom: 5px;
-  width: 160px
 }
 
 .port {
   width: 70px;
   margin-left: 87px;
-  margin-bottom: 5px;
 }
 
 .login {
-  width: 160px;
   margin-left: 78px;
-  margin-bottom: 5px;
 }
 
 .pass {
-  width: 160px;
   margin-left: 69px;
 }
 
@@ -127,6 +138,43 @@ body {
   border: 2px solid #3b3b3b;
   background: #ff9012;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 400px) {
+  body { font-size: 10pt; }
+  .mode-choose { width: 200px; }
+  .save { font-size: 9pt; }
+  .combobox-mode { width: 170px; height: 80px; }
+  .mode-field { width: 110px; font-size: 9pt; }
+  .name-mode { margin-left: 5px; }
+  .pass-mode { margin-left: 11px; }
+  .type-mode { margin-left: 31px; }
+  .mqtt-label { top: 135px; width: 230px; }
+  .combobox-mqtt { top: 155px; width: 210px; height: 105px}
+  .mqtt-field { width: 115px; font-size: 9pt; }
+  .address { margin-left: 5px; }
+  .port { width: 40px; margin-left: 60px; }
+  .login { margin-left: 53px; }
+  .pass { margin-left: 46px; }
+}
+
+@media screen and (max-width: 240px) {
+  body { font-size: 7pt; }
+  .mode-choose { width: 150px; }
+  .radio-mode {width: 10px; margin: 0}
+  .save { font-size: 6pt; }
+  .combobox-mode { width: 120px; height: 65px; }
+  .mode-field { width: 75px; font-size: 6pt; }
+  .name-mode { margin-left: 5px; }
+  .pass-mode { margin-left: 10px; }
+  .type-mode { margin-left: 24px; }
+  .mqtt-label { top: 120px; width: 160px; }
+  .combobox-mqtt { top: 135px; width: 155px; height: 85px}
+  .mqtt-field { width: 90px; font-size: 6pt; }
+  .address { margin-left: 1px; }
+  .port { width: 20px; margin-left: 40px; }
+  .login { margin-left: 35px; }
+  .pass { margin-left: 30px; }
 }
 </style>
 </head>
