@@ -67,7 +67,7 @@ body {
 }
 
 .save {
-  width: 70px;
+  width: 80px;
   position: absolute;
   right: -2px;
   bottom: -2px;
@@ -107,7 +107,7 @@ body {
   margin: 0 auto;
   top: 175px;
   width: 300px;
-  height: 117px;
+  height: 120px;
 }
 
 .mqtt-field {
@@ -143,7 +143,7 @@ body {
 @media screen and (max-width: 400px) {
   body { font-size: 10pt; }
   .mode-choose { width: 200px; }
-  .save { font-size: 9pt; }
+  .save { font-size: 9pt; width: 60px}
   .combobox-mode { width: 170px; height: 80px; }
   .mode-field { width: 110px; font-size: 9pt; }
   .name-mode { margin-left: 5px; }
@@ -156,6 +156,25 @@ body {
   .port { width: 40px; margin-left: 60px; }
   .login { margin-left: 53px; }
   .pass { margin-left: 46px; }
+}
+
+@media screen and (max-width: 240px) {
+  body { font-size: 7pt; }
+  .mode-choose { width: 150px; }
+  .radio-mode {width: 10px; margin: 0}
+  .save { font-size: 6pt; width: 40px}
+  .combobox-mode { width: 120px; height: 65px; }
+  .mode-field { width: 75px; font-size: 6pt; }
+  .name-mode { margin-left: 5px; }
+  .pass-mode { margin-left: 10px; }
+  .type-mode { margin-left: 24px; }
+  .mqtt-label { top: 120px; width: 160px; }
+  .combobox-mqtt { top: 135px; width: 155px; height: 85px}
+  .mqtt-field { width: 90px; font-size: 6pt; }
+  .address { margin-left: 1px; }
+  .port { width: 20px; margin-left: 40px; }
+  .login { margin-left: 35px; }
+  .pass { margin-left: 30px; }
 }
 </style>
 </head>
