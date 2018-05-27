@@ -17,8 +17,8 @@ Released under the MIT license: http://jsbin.mit-license.org
 <style id="jsbin-css">
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  background: #576fde;
 }
-
 .wrapper {
   position: absolute;
   left: 0;
@@ -27,13 +27,11 @@ body {
   height: 100%;
   background: #576fde;
 }
-
-.mode-choose {
+.choose-mode {
   width: 280px;
   margin: 5px auto;
   color: white;
 }
-
 .combobox-mode {
   position: absolute;
   margin: 0 auto;
@@ -43,30 +41,24 @@ body {
   height: 90px;
   border-radius: 10px;
 }
-
 .combobox-ap {
   visibility: hidden;
 }
-
 .mode-field {
   width: 150px;
   margin-bottom: 5px;
   padding: 0 3px;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
 .name-mode {
   margin-left: 25px;
 }
-
 .pass-mode {
   margin-left: 33px;
 }
-
 .type-mode {
   margin-left: 57px;
 }
-
 .save {
   width: 80px;
   position: absolute;
@@ -78,20 +70,16 @@ body {
   cursor: pointer;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
 .save:hover {
   background: #ffa033;
 }
-
 .save:active {
   outline: none;
   background: #cf6f02;
 }
-
 .save:focus {
   outline: none;
 }
-
 .mqtt-label {
   position: absolute;
   top: 150px;
@@ -101,7 +89,6 @@ body {
   margin: 0 auto;
   color: white;
 }
-
 .combobox-mqtt {
   position: absolute;
   left: 0;
@@ -111,42 +98,35 @@ body {
   width: 300px;
   height: 117px;
 }
-
 .mqtt-field {
   width: 160px;
   margin-bottom: 5px;
   font-family: 'Source Sans Pro', sans-serif;
   padding: 0 3px;
 }
-
 .address {
   margin-left: 20px;
 }
-
 .port {
   width: 70px;
   margin-left: 87px;
 }
-
 .login {
   margin-left: 78px;
 }
-
 .pass {
   margin-left: 69px;
 }
-
 .combobox-style {
   border: 2px solid #3b3b3b;
   background: #ff9012;
   border-radius: 10px;
 }
-
 @media screen and (max-width: 400px) {
   body { font-size: 10pt; }
-  .mode-choose { width: 200px; }
-  .save { font-size: 9pt; width: 60px}
-  .combobox-mode { width: 170px; height: 80px; }
+  .choose-mode { width: 190px; }
+  .save { font-size: 9pt; width: 60px;}
+  .combobox-mode { width: 170px; height: 80px; -webkit-height: 85px}
   .mode-field { width: 106px; font-size: 9pt; padding: 0 2px;}
   .name-mode { margin-left: 5px; }
   .pass-mode { margin-left: 11px; }
