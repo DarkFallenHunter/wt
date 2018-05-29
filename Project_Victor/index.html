@@ -13,127 +13,8 @@ Released under the MIT license: http://jsbin.mit-license.org
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title>JS Bin</title>
-<style id="jsbin-css">
-body {
-  position: relative;
-  min-height: 100%;
-  font-family: 'Source Sans Pro', sans-serif;
-  background: #576fde;
-}
-.choose-mode {
-  width: 280px;
-  margin: 5px auto;
-  color: white;
-}
-.combobox-mode {
-  position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  width: 250px;
-  height: 90px;
-  border-radius: 10px;
-}
-.combobox-ap {
-  visibility: hidden;
-}
-.mode-field {
-  width: 150px;
-  margin-bottom: 5px;
-  padding: 0 3px;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-.name-mode {
-  margin-left: 25px;
-}
-.pass-mode {
-  margin-left: 33px;
-}
-.type-mode {
-  margin-left: 57px;
-}
-.save {
-  width: 80px;
-  position: absolute;
-  right: -2px;
-  bottom: -2px;
-  border-radius: 10px;
-  border: 2px solid #3b3b3b;
-  background: #ffbd38;
-  cursor: pointer;
-  font-family: 'Source Sans Pro', sans-serif;
-}
-.save:hover {
-  background: #ffa033;
-}
-.save:active {
-  outline: none;
-  background: #cf6f02;
-}
-.save:focus {
-  outline: none;
-}
-.mqtt-label {
-  position: absolute;
-  top: 150px;
-  left: 0;
-  right: 0;
-  width: 320px;
-  margin: 0 auto;
-  color: white;
-}
-.combobox-mqtt {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  top: 175px;
-  width: 300px;
-  height: 117px;
-}
-.mqtt-field {
-  width: 160px;
-  margin-bottom: 5px;
-  font-family: 'Source Sans Pro', sans-serif;
-  padding: 0 3px;
-}
-.address {
-  margin-left: 20px;
-}
-.port {
-  width: 70px;
-  margin-left: 87px;
-}
-.login {
-  margin-left: 78px;
-}
-.pass {
-  margin-left: 69px;
-}
-.combobox-style {
-  border: 2px solid #3b3b3b;
-  background: #ff9012;
-  border-radius: 10px;
-}
-@media screen and (max-width: 400px) {
-  body { font-size: 10pt; }
-  .choose-mode { width: 190px; }
-  .save { font-size: 9pt; width: 60px;}
-  .combobox-mode {width: 170px; height: 88px;}
-  .mode-field { width: 106px; font-size: 9pt; padding: 0 2px;}
-  .name-mode { margin-left: 5px; }
-  .pass-mode { margin-left: 11px; }
-  .type-mode { margin-left: 31px; }
-  .mqtt-label { top: 135px; width: 230px; }
-  .combobox-mqtt { top: 155px; width: 210px; height: 110px;}
-  .mqtt-field { width: 112px; font-size: 9pt; padding: 0 2px;}
-  .address { margin-left: 5px; }
-  .port { width: 40px; margin-left: 60px; }
-  .login { margin-left: 53px; }
-  .pass { margin-left: 46px; }
-}
-</style>
 </head>
 <body>
   <div class='wrapper'>
@@ -173,23 +54,6 @@ body {
       </fieldset>
     </form>
   </div>
-<script id="jsbin-javascript">
-var ap_radio = document.getElementById('ap-radio'),
-    wifi_radio = document.getElementById('wifi-radio'),
-    combobox_ap = document.getElementById('combobox-ap-id'),
-    combobox_wifi = document.getElementById('combobox-wifi-id')
-
-ap_radio.onchange = function()
-{
-  combobox_ap.style.visibility = 'visible';
-  combobox_wifi.style.visibility = 'hidden';
-}
-
-wifi_radio.onchange = function()
-{
-  combobox_ap.style.visibility = 'hidden';
-  combobox_wifi.style.visibility = 'visible';
-}
-</script>
+<script src='script.js'></script>
 </body>
 </html>
